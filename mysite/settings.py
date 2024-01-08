@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ["*"]
 
 # FORM SUBMISSION
 # Comment out the following line and place your railway URL, and your production URL in the array.
-CSRF_TRUSTED_ORIGINS = ["https://*.ruehl-photo.de"]
+CSRF_TRUSTED_ORIGINS = ["https://test.ruehl-photo.de"]
 
 # Application definition
 
