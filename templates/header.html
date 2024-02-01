@@ -1,6 +1,6 @@
 {% load static %}
 <div class="container">
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg bg-primary-subtle">
     <div class="container-fluid">
       <!-- Logo -->
       <a class="navbar-brand me-auto" href="{% url 'home' %}">
@@ -31,9 +31,6 @@
       <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav  me-auto mb-2 mb-lg-0 justify-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle"
                href="#"
@@ -91,16 +88,16 @@
             <a class="nav-link" href="#">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">Über mich</a>
+            <a class="nav-link" href="{% url 'about' %}">Über mich...</a>
           </li>
         </ul>
         <!-- Search -->
         <form class="d-flex mt-2" role="search">
           <input class="form-control me-2"
                  type="search"
-                 placeholder="Suche"
+                 placeholder="Suchen..."
                  aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Suche</button>
+          <button class="btn btn-outline-dark" type="submit">Suche</button>
         </form>
       </div>
     </div>
