@@ -1,7 +1,11 @@
 {% load static %}
 <div class="container">
   <div class="container text-muted text-center bg-gray">
-    {% include "picture.html" with name="logo" width="500" dwidth="1000" %}
+    <img src="{% static 'img/logo.jpg' %}"
+         alt="logo"
+         width="500"
+         height="129"
+         class="img-fluid">
     <ul class="list-inline">
       <li class="list-inline-item me-4">
         <a class="link-secondary" href="#">Datenschutz</a>

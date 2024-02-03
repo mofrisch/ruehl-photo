@@ -1,7 +1,7 @@
 {% load static %}
 <picture class="img-fluid">
         <source type="image/avif"
-                srcset="{% static 'img/' %}{{ name }}-{{ width }}.avif , {% static 'img/' %} {{ name }}-{{ dwidth }}.avif 2x" />
+                srcset="{% static 'img/' %}{{ name }}-{{ width }}.avif , {% static 'img/' %}{{ name }}-{{ width|add:width }}.avif 2x" />
         <source type="image/webp"
                 srcset="{% static 'img/logo-500.webp' %}, {% static 'img/logo-1000.webp' %} 2x" />
         <source type="image/jpeg" srcset="{% static 'img/jacky-500.jpg' %}" />
