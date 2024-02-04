@@ -1,23 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
+{% load pictures %}
 {% block title %}
   Über mich... - {{ block.super }}
 {% endblock title %}
 {% block content %}
   <div class="row mb-2">
-    <div class="col-12 col-lg-4">
-      <picture class="img-fluid">
-        <source type="image/webp"
-                srcset="{% static 'img/jacky-500.webp' %}"
-                alt="Jacky" />
-        <source type="image/jpeg" srcset="{% static 'img/jacky-500.jpg' %}" />
-        <img src="{% static 'img/jacky-500.jpg' %}"
-             class="img-fluid"
-             height="100%"
-             width="100%"
-             alt="Jacky" />
-      </picture>
-    </div>
+    <div class="col-12 col-lg-4">{% get_picture "jacky" 300 %}</div>
     <div class="col-12 col-lg-8 align-self-center">
       <h1>Wer steht hinter der Kamera?</h1>
       <p>

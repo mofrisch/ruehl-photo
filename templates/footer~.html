@@ -1,17 +1,82 @@
 {% load static %}
+{% load pictures %}
 <div class="container">
   <div class="container text-muted text-center bg-gray">
     <picture class="img-fluid">
       <source type="image/avif"
-              srcset="{% static 'img/logo-500.avif' %}, {% static 'img/logo-1000.avif' %} 2x" />
+              srcset="{% static 'img/gen/logo-100.avif' %} 100w,
+                      {% static 'img/gen/logo-200.avif' %} 200w,
+                      {% static 'img/gen/logo-300.avif' %} 300w,
+                      {% static 'img/gen/logo-400.avif' %} 400w,
+                      {% static 'img/gen/logo-500.avif' %} 500w,
+                      {% static 'img/gen/logo-600.avif' %} 600w,
+                      {% static 'img/gen/logo-700.avif' %} 700w,
+                      {% static 'img/gen/logo-800.avif' %} 800w,
+                      {% static 'img/gen/logo-900.avif' %} 900w,
+                      {% static 'img/gen/logo-1000.avif' %} 1000w,
+                      {% static 'img/gen/logo-1100.avif' %} 1100w,
+                      {% static 'img/gen/logo-1200.avif' %} 1200w,
+                      {% static 'img/gen/logo-1300.avif' %} 1300w,
+                      {% static 'img/gen/logo-1400.avif' %} 1400w,
+                      {% static 'img/gen/logo-1500.avif' %} 1500w,
+                      {% static 'img/gen/logo-1600.avif' %} 1600w,
+                      {% static 'img/gen/logo-1700.avif' %} 1700w,
+                      {% static 'img/gen/logo-1800.avif' %} 1800w,
+                      {% static 'img/gen/logo-1900.avif' %} 1900w,
+                      {% static 'img/gen/logo-2000.avif' %} 2000w"
+              sizes="(max-width: 600px) 200px,
+                     500px" />
       <source type="image/webp"
-              srcset="{% static 'img/logo-500.webp' %}, {% static 'img/logo-1000.webp' %} 2x" />
-      <source type="image/jpeg" srcset="{% static 'img/jacky-500.jpg' %}" />
-      <img src="{% static 'img/logo-500.jpg' %}"
+              srcset="{ % static 'img/gen/logo-100.webp' %} 100w,
+                      {% static 'img/gen/logo-200.webp' %} 200w,
+                      {% static 'img/gen/logo-300.webp' %} 300w,
+                      {% static 'img/gen/logo-400.webp' %} 400w,
+                      {% static 'img/gen/logo-500.webp' %} 500w,
+                      {% static 'img/gen/logo-600.webp' %} 600w,
+                      {% static 'img/gen/logo-700.webp' %} 700w,
+                      {% static 'img/gen/logo-800.webp' %} 800w,
+                      {% static 'img/gen/logo-900.webp' %} 900w,
+                      {% static 'img/gen/logo-1000.webp' %} 1000w,
+                      {% static 'img/gen/logo-1100.webp' %} 1100w,
+                      {% static 'img/gen/logo-1200.webp' %} 1200w,
+                      {% static 'img/gen/logo-1300.webp' %} 1300w,
+                      {% static 'img/gen/logo-1400.webp' %} 1400w,
+                      {% static 'img/gen/logo-1500.webp' %} 1500w,
+                      {% static 'img/gen/logo-1600.webp' %} 1600w,
+                      {% static 'img/gen/logo-1700.webp' %} 1700w,
+                      {% static 'img/gen/logo-1800.webp' %} 1800w,
+                      {% static 'img/gen/logo-1900.webp' %} 1900w,
+                      {% static 'img/gen/logo-2000.webp' %} 2000w"
+              sizes="(max-width: 600px) 200px,
+                     500px" />
+      <source type="image/jpeg"
+              srcset="{% static 'img/gen/logo-100.jpg' %} 100w,
+                      {% static 'img/gen/logo-200.jpg' %} 200w,
+                      {% static 'img/gen/logo-300.jpg' %} 300w,
+                      {% static 'img/gen/logo-400.jpg' %} 400w,
+                      {% static 'img/gen/logo-500.jpg' %} 500w,
+                      {% static 'img/gen/logo-600.jpg' %} 600w,
+                      {% static 'img/gen/logo-700.jpg' %} 700w,
+                      {% static 'img/gen/logo-800.jpg' %} 800w,
+                      {% static 'img/gen/logo-900.jpg' %} 900w,
+                      {% static 'img/gen/logo-1000.jpg' %} 1000w,
+                      {% static 'img/gen/logo-1100.jpg' %} 1100w,
+                      {% static 'img/gen/logo-1200.jpg' %} 1200w,
+                      {% static 'img/gen/logo-1300.jpg' %} 1300w,
+                      {% static 'img/gen/logo-1400.jpg' %} 1400w,
+                      {% static 'img/gen/logo-1500.jpg' %} 1500w,
+                      {% static 'img/gen/logo-1600.jpg' %} 1600w,
+                      {% static 'img/gen/logo-1700.jpg' %} 1700w,
+                      {% static 'img/gen/logo-1800.jpg' %} 1800w,
+                      {% static 'img/gen/logo-1900.jpg' %} 1900w,
+                      {% static 'img/gen/logo-2000.jpg' %} 2000w"
+              sizes="(max-width: 600px) 200px,
+                     500px" />
+      <img src="{% static 'img/gen/logo-500.jpg' %}"
            class="img-fluid"
-           height="129"
            width="500"
-           alt="Jacky" />
+           height="100%"
+           alt="Logo" />
     </picture>
     <ul class="list-inline">
       <li class="list-inline-item me-4">

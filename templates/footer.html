@@ -1,11 +1,8 @@
 {% load static %}
+{% load pictures %}
 <div class="container">
   <div class="container text-muted text-center bg-gray">
-    <img src="{% static 'img/logo.jpg' %}"
-         alt="logo"
-         width="500"
-         height="129"
-         class="img-fluid">
+    {% get_picture "logo" 500 %}
     <ul class="list-inline">
       <li class="list-inline-item me-4">
         <a class="link-secondary" href="#">Datenschutz</a>
