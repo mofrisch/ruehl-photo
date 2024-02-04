@@ -1,3 +1,9 @@
 .venv
 __pycache__
 db.sqlite3
+staticfiles
+node_modules
+bun.lockdb
+package.json
+bootstrap-5.3.2-dist
+.DS_Store

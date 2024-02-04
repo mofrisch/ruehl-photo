@@ -1,0 +1,105 @@
+{% load static %}
+<div class="container">
+  <nav class="navbar navbar-expand-lg bg-primary-subtle">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand me-auto" href="{% url 'home' %}">
+        <div class="d-flex m-2">
+          <div class="d-flex flex-row mt-1">
+            <img src="{% static 'ico/photo-camera.svg' %}"
+                 width="60"
+                 height="60"
+                 class="d-inline-block"
+                 alt="" />
+          </div>
+          <div class="d-flex flex-column mx-4">
+            <div>Jacqueline Ruehl</div>
+            <div>Photography</div>
+          </div>
+        </div>
+      </a>
+      <!-- Navbar Toggler-->
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav  me-auto mb-2 mb-lg-0 justify-center">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+               href="#"
+               id="navbarDropdownMenuLink"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">Fotografie</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" href="{% url 'wedding' %}">Hochzeit</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Pair Shooting</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Family Shooting</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Schwangerschaft</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Newborn</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">mit Hund</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+               href="#"
+               id="navbarDropdownMenuLink"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">Pferde</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" href="#">Pferdefotografie</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Sportfotografie</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Turnierfotografie</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Videografie</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gutscheine</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">Über mich...</a>
+          </li>
+        </ul>
+        <!-- Search -->
+        <form class="d-flex mt-2" role="search">
+          <input class="form-control me-2"
+                 type="search"
+                 placeholder="Suchen..."
+                 aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit">Suche</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>

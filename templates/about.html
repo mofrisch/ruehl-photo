@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% load pictures %}
+{% block title %}
+  Über mich... - {{ block.super }}
+{% endblock title %}
+{% block content %}
+  <div class="row mb-2">
+    <div class="col-12 col-lg-4">{% get_picture "jacky" 300 %}</div>
+    <div class="col-12 col-lg-8 align-self-center">
+      <h1>Wer steht hinter der Kamera?</h1>
+      <p>
+        Hallo, ich bin Jacky, 33 Jahre alt und gebürtige Westfälin mit dem Herz am
+        rechten Fleck, das für meine Familie und die Pferde schlägt. Ich bin
+        diejenige, die nicht ruhig sitzen kann, wenn es noch etwas zu tun gibt.
+        Mit zwei kleinen Kindern, einem tollen Mann an meiner Seite, einem Pferd
+        und meiner Leidenschaft für die Fotografie wird es nie langweilig. Im
+        Gegenteil! Es erfüllt mich sehr, nach einem Fotoshooting, manchmal auch
+        noch spät abends, am Laptop zu sitzen und die ersten Bilder zu sichten,
+        während meine beiden kleinen Mäuse im Hintergrund leise schnarchen. Ich
+        fotografiere seit 10 Jahren leidenschaftlich Pferde und bin seit 2022 auch
+        in der Menschenfotografie aktiv. Besonders gerne halte ich echte Emotionen
+        und innige Familienmomente fest. Für mich ist es sehr wichtig, dass die
+        Chemie stimmt, damit während des Shootings authentische Bilder entstehen
+        können. Aus diesem Grund telefoniere ich gerne vorher mit euch. Ich freue
+        mich darauf, von euch zu hören.
+      </p>
+      <p>
+        Bis bald,
+        <br />
+        Eure Jacky​
+      </p>
+      <h2 class="mt-4">Daily business</h2>
+      <p>
+        Langeweile kommt bei mir so schnell nicht auf. Mit zwei Kindern, meinem
+        Mann und Ben, unserem Pferd, sind ruhige Stunden auf der Couch eine
+        Seltenheit. Das kommt meinem energiegeladenen Charakter und meinem Geist
+        aber sehr entgegen. Ich besitze unendlich viel Energie und versuche stets,
+        das Beste und das Meiste aus jedem Tag herauszuholen.
+      </p>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 col-lg-9">
+      <h2>Meine Werte</h2>
+      <p>
+        Ich zeichne mich durch Ehrlichkeit und Offenheit aus. Meine Worte spiegeln
+        meine Gedanken wider und umgekehrt. Zuverlässigkeit und Pünktlichkeit sind
+        für mich selbstverständlich. Dank meiner ausgeprägten Empathie fällt es
+        mir leicht, mich in andere hineinzuversetzen. Kreativität fließt in mir
+        und bringt ständig neue Ideen hervor. Meine Geduld macht es mir besonders
+        leicht, mit Kindern umzugehen. Zudem bin ich sehr tierlieb, mit einer
+        besonderen Zuneigung zu Pferden.
+      </p>
+      <h2>Never ending learning</h2>
+      <p>
+        Acht Jahre lang diente ich als Soldatin bei der Bundeswehr, war sowohl
+        Bürokauffrau als auch Fallschirmjägerin – immer unterwegs, voller Energie
+        und Lebensfreude. Während meiner ersten Schwangerschaft bildete ich mich
+        weiter und erlangte meinen Betriebswirt; mein Fachabitur holte ich in der
+        Elternzeit nach. Bei meinem zweiten Kind meldete ich das Gewerbe für meine
+        Fotografie an. Auch hier gibt es keinen Stillstand. Man lernt nie aus, und
+        genau diese Einstellung möchte ich meinen Kindern mit auf ihren Weg geben.
+      </p>
+    </div>
+    <div class="col-12 col-lg-3 align-self-center">
+      <picture class="img-fluid">
+        <source type="image/webp"
+                srcset="{% static 'img/reiterin-300.webp' %}"
+                alt="Jacky" />
+        <source type="image/jpeg" srcset="{% static 'img/reiterin-300.jpg' %}" />
+        <img src="{% static 'img/reiterin-300.jpg' %}"
+             class="img-fluid"
+             height="300"
+             width="300"
+             alt="Reiterin" />
+      </picture>
+    </div>
+  </div>
+{% endblock content %}

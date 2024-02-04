@@ -1,0 +1,23 @@
+{% load static %}
+<picture class="img-fluid">
+        <source type="image/avif"
+                srcset="{% for url,width in avif_urls %} {% static url %} {{ width }}w,
+                        {% endfor %}"
+                sizes="(max-width: 600px) 200px,
+                       500px" />
+        <source type="image/webp"
+                srcset="{% for url,width in webp_urls %} {% static url %} {{ width }}w,
+                        {% endfor %}"
+                sizes="(max-width: 600px) 200px,
+                       500px" />
+        <source type="image/jpeg"
+                srcset="{% for url,width in jpg_urls %} {% static url %} {{ width }}w,
+                        {% endfor %}"
+                sizes="(max-width: 600px) 200px,
+                       500px" />
+        <img src="{% static 'img/gen/logo-500.jpg' %}"
+             class="img-fluid"
+             width="500"
+             height="100%"
+             alt="Logo" />
+</picture>
