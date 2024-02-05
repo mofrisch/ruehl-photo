@@ -6,7 +6,9 @@
 {% endblock title %}
 {% block content %}
   <div class="row mb-2">
-    <div class="col-12 col-md-6 col-lg-4">{% picture "jacky" 516 774 %}</div>
+    <div class="col-12 col-md-6 col-lg-4">
+      {% picture "jacky" 600 900 sizes="(min-width: 1400px) 416px, (min-width: 1200px) 356px, (min-width: 1000px) 296px, (min-width: 780px) 336px, (min-width: 580px) 516px, calc(100vw - 24px)" %}
+    </div>
     <div class="col-12 col-md-6 col-lg-8 align-self-center">
       <h1>Wer steht hinter der Kamera?</h1>
       <p>
@@ -63,6 +65,8 @@
         genau diese Einstellung möchte ich meinen Kindern mit auf ihren Weg geben.
       </p>
     </div>
-    <div class="col-12 col-md-4 col-lg-3">{% picture "reiterin" 516 524 %}</div>
+    <div class="col-12 col-md-4 col-lg-3">
+      {% picture "reiterin" 600 609 sizes="(min-width: 1400px) 306px, (min-width: 1200px) 261px, (min-width: 780px) 216px, (min-width: 580px) 516px, 92.31vw" %}
+    </div>
   </div>
 {% endblock content %}
