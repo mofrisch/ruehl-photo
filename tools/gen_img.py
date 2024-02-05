@@ -67,9 +67,11 @@ parser.add_argument("-v", "--version", action="version", version="%(prog)s 1.0")
 name = parser.parse_args().name
 
 original = Image.open("../static/img/" + name + ".jpg")
+ratio = original.height / original.width
+sizes = [(width, int(width * ratio)) for width in widths]
 
 for size in sizes:
     image = original.copy()
-    image.thumbnail(size)
+    image = image.resize(size)
     for format in formats:
         image.save("../static/img/gen/" + name + "-" + str(size[0]) + "." + format)
