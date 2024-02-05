@@ -24,28 +24,8 @@ import pillow_avif  # Have to import this before importing PIL
 from PIL import Image
 
 
-widths = [
-    100,
-    200,
-    300,
-    400,
-    500,
-    600,
-    700,
-    800,
-    900,
-    1000,
-    1100,
-    1200,
-    1300,
-    1400,
-    1500,
-    1600,
-    1700,
-    1800,
-    1900,
-    2000,
-]
+widths = range(100, 3100, 100)
+
 sizes = [(width, width) for width in widths]
 
 formats = ["jpg", "avif", "webp"]
