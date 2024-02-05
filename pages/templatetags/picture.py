@@ -36,7 +36,7 @@ def picture(name, design_width, design_height, sizes):
     jpeg_urls = [
         ["img/gen/" + name + "-" + str(width) + ".jpg", width] for width in widths
     ]
-    img_url = "img/gen/" + name + "-" + str(design_width) + ".jpg"
+    img_url = "img/gen/" + name + "-" + str(design_width / 2) + ".jpg"
 
     return {
         "name": name,
