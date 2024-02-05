@@ -4,7 +4,7 @@ register = template.Library()
 
 
 @register.inclusion_tag("picture.html")
-def get_picture(name, width):
+def get_picture(name, design_width):
     widths = [
         100,
         200,
@@ -39,7 +39,7 @@ def get_picture(name, width):
 
     return {
         "name": name,
-        "width": width,
+        "design_width": design_width,
         "avif_urls": avif_urls,
         "webp_urls": webp_urls,
         "jpeg_urls": jpeg_urls,
