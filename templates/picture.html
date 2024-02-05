@@ -1,5 +1,5 @@
 {% load static %}
-<picture class="img-fluid">
+<picture>
         <source type="image/avif"
                 srcset="{% for url,width in avif_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
@@ -8,12 +8,12 @@
         <source type="image/webp"
                 srcset="{% for url,width in webp_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
-                sizes="(max-width: 600px) 200px,
-                       500px" />
+                sizes="(max-width: 992px) 100vw,
+                       33vw" />
         <source type="image/jpeg"
                 srcset="{% for url,width in jpg_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
-                sizes="(max-width: 600px) 200px,
-                       500px" />
-        <img src="{% static 'img/gen/logo-500.jpg' %}" class="img-fluid" alt="Logo" width={{ design_width }} height="100%" />
+                sizes="(max-width: 992px) 100vw,
+                       33vw" />
+        <img src="{% static img_url %}" class="img-fluid" alt="{{ name|capfirst }}" width={{ design_width }} height="100%" />
 </picture>

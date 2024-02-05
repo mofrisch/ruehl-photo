@@ -36,6 +36,7 @@ def get_picture(name, design_width):
     jpeg_urls = [
         ["img/gen/" + name + "-" + str(width) + ".jpg", width] for width in widths
     ]
+    img_url = "img/gen/" + name + "-" + str(design_width) + ".jpg"
 
     return {
         "name": name,
@@ -43,4 +44,5 @@ def get_picture(name, design_width):
         "avif_urls": avif_urls,
         "webp_urls": webp_urls,
         "jpeg_urls": jpeg_urls,
+        "img_url": img_url,
     }
