@@ -3,9 +3,14 @@
         <source type="image/avif"
                 srcset="{% for url,width in avif_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
-                sizes="(min-width: 780px) 500px,
+                sizes="(min-width: 400px) 300px,
+                       (min-width: 460px) 400px,
                        (min-width: 580px) 468px,
-                       calc(100vw - 72px)" />
+                       (min-width: 780px) 500px,
+                       (min-width: 1000px) 296px,
+                       (min-width: 1200px) 261px,
+                       (min-width: 1400px) 300px,
+                       calc(30vw + 186px)" />
         <source type="image/webp"
                 srcset="{% for url,width in webp_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
