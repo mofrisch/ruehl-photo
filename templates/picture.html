@@ -3,8 +3,8 @@
         <source type="image/avif"
                 srcset="{% for url,width in avif_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
-                sizes="(max-width: 600px) 200px,
-                       500px" />
+                sizes="(max-width: 992px) 100vw,
+                       33vw" />
         <source type="image/webp"
                 srcset="{% for url,width in webp_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
@@ -17,7 +17,7 @@
                        500px" />
         <img src="{% static 'img/gen/logo-500.jpg' %}"
              class="img-fluid"
-             width="500"
-             height="100%"
-             alt="Logo" />
+             alt="Logo"
+             width="100%"
+             height="100%" />
 </picture>
