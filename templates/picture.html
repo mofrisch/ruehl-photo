@@ -3,8 +3,9 @@
         <source type="image/avif"
                 srcset="{% for url,width in avif_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
-                sizes="(min-width: 600px) {{ design_width }}px,
-                       calc(100vw - 72px)" />
+                sizes="(min-width: 992px) 33.3vw,
+                       (min-width: 768px) 50vw,
+                       100vw" />
         <source type="image/webp"
                 srcset="{% for url,width in webp_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"

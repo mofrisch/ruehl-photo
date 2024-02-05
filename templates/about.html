@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
-{% load pictures %}
+{% load picture %}
 {% block title %}
   Über mich... - {{ block.super }}
 {% endblock title %}
 {% block content %}
   <div class="row mb-2">
-    <div class="col-12 col-md-6 col-lg-4">{% get_picture "jacky" 400 600 %}</div>
+    <div class="col-12 col-md-6 col-lg-4">{% picture "jacky" 516 774 %}</div>
     <div class="col-12 col-md-6 col-lg-8 align-self-center">
       <h1>Wer steht hinter der Kamera?</h1>
       <p>
@@ -41,7 +41,7 @@
     </div>
   </div>
   <div class="row mt-4">
-    <div class="col-12 col-lg-9">
+    <div class="col-12 col-md-8 col-lg-9">
       <h2>Meine Werte</h2>
       <p>
         Ich zeichne mich durch Ehrlichkeit und Offenheit aus. Meine Worte spiegeln
@@ -63,6 +63,6 @@
         genau diese Einstellung möchte ich meinen Kindern mit auf ihren Weg geben.
       </p>
     </div>
-    <div class="col-12 col-lg-3">{% get_picture "reiterin" 300 300 %}</div>
+    <div class="col-12 col-md-4 col-lg-3">{% picture "reiterin" 516 524 %}</div>
   </div>
 {% endblock content %}

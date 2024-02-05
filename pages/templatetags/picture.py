@@ -4,7 +4,7 @@ register = template.Library()
 
 
 @register.inclusion_tag("picture.html")
-def get_picture(name, design_width, design_height):
+def picture(name, design_width, design_height):
     widths = [
         100,
         200,
