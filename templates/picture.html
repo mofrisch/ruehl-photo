@@ -3,17 +3,20 @@
         <source type="image/avif"
                 srcset="{% for url,width in avif_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
-                sizes="(max-width: 992px) 100vw,
-                       33vw" />
+                sizes="(min-width: 780px) 500px,
+                       (min-width: 580px) 468px,
+                       calc(100vw - 72px)" />
         <source type="image/webp"
                 srcset="{% for url,width in webp_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
-                sizes="(max-width: 992px) 100vw,
-                       33vw" />
+                sizes="(min-width: 780px) 500px,
+                       (min-width: 580px) 468px,
+                       calc(100vw - 72px)" />
         <source type="image/jpeg"
                 srcset="{% for url,width in jpg_urls %} {% static url %} {{ width }}w,
                         {% endfor %}"
-                sizes="(max-width: 992px) 100vw,
-                       33vw" />
+                sizes="(min-width: 780px) 500px,
+                       (min-width: 580px) 468px,
+                       calc(100vw - 72px)" />
         <img src="{% static img_url %}" class="img-fluid" alt="{{ name|capfirst }}" width={{ design_width }} height={{ design_height }} />
 </picture>
