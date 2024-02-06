@@ -11,3 +11,7 @@ class AboutPageView(TemplateView):
 
 class WeddingPageView(TemplateView):
     template_name = "wedding.html"
+
+
+class ScratchPageView(TemplateView):
+    template_name = "scratch.html"

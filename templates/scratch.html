@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load picture %}
+{% block title %}
+  Scratch - {{ block.super }}
+{% endblock title %}
+{% block content %}
+  <h1>Scratch</h1>
+  <div class="container p-2 border border-primary">
+    <div class="row">{% picture "wedding" 1400 787 True xxl=1296 xl=1116 lg=936 md=696 sm=516 %}</div>
+    <div class="row g-0">
+      <div class="col-xl-3">{% picture "wedding" 1400 787 True xxl=1296 xl=1116 lg=936 md=696 sm=516 %}</div>
+      <div class="col-xl-3">{% picture "wedding" 1400 787 True xxl=1296 xl=1116 lg=936 md=696 sm=516 %}</div>
+      <div class="col-xl-3">{% picture "wedding" 1400 787 True xxl=1296 xl=1116 lg=936 md=696 sm=516 %}</div>
+      <div class="col-xl-3">{% picture "wedding" 1400 787 True xxl=1296 xl=1116 lg=936 md=696 sm=516 %}</div>
+    </div>
+    <div class="row">
+      <div class="col-xl-3">{% picture "wedding" 1400 787 True xxl=1296 xl=1116 lg=936 md=696 sm=516 %}</div>
+      <div class="col-xl-3">{% picture "wedding" 1400 787 True xxl=1296 xl=1116 lg=936 md=696 sm=516 %}</div>
+      <div class="col-xl-3">{% picture "wedding" 1400 787 True xxl=1296 xl=1116 lg=936 md=696 sm=516 %}</div>
+    </div>
+  </div>
+{% endblock content %}

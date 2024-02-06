@@ -3,6 +3,8 @@
 # Generate images in different formats and sizes
 
 # © 2024 Moritz Frisch.
+# All rights reserved.
+
 # This file is licensed under the MIT License.
 # License text is available at https://opensource.org/licenses/MIT
 
@@ -23,8 +25,12 @@ import argparse
 import pillow_avif  # Have to import this before importing PIL
 from PIL import Image
 
+ver = "1.1.0"
 
-widths = range(100, 3100, 100)
+
+widths = range(100, 2100, 100)
+extra_widths = range(2200, 4001, 200)
+
 
 sizes = [(width, width) for width in widths]
 
@@ -35,6 +41,9 @@ parser = argparse.ArgumentParser(
 )
 parser.add_argument("name", help="Name of the image file")
 parser.add_argument(
+    "-l", "--large", action="store_true", help="Generate extra large images"
+)
+parser.add_argument(
     "--formats",
     help="Comma-separated list of formats (default: " + ", ".join(formats) + ")",
 )
@@ -42,9 +51,13 @@ parser.add_argument(
     "--sizes",
     help="Comma-separated list of sizes (default: " + ", ".join(map(str, widths)) + ")",
 )
-parser.add_argument("-v", "--version", action="version", version="%(prog)s 1.0")
+parser.add_argument(
+    "-v", "--version", action="version", version="%(prog)s " + ver + " by Moritz Frisch"
+)
 
 name = parser.parse_args().name
+if parser.parse_args().large:
+    widths = [*widths, *extra_widths]
 
 original = Image.open("../static/img/" + name + ".jpg")
 ratio = original.height / original.width
