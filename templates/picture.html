@@ -1,16 +1,8 @@
 {% load static %}
-<picture>
-        <source type="image/avif"
-                srcset="{% for url,width in avif_urls %} {% static url %} {{ width }}w,
-                        {% endfor %}"
-                sizes="{{ sizes }}" />
-        <source type="image/webp"
-                srcset="{% for url,width in webp_urls %} {% static url %} {{ width }}w,
-                        {% endfor %}"
-                sizes="{{ sizes }}" />
-        <source type="image/jpeg"
-                srcset="{% for url,width in jpeg_urls %} {% static url %} {{ width }}w,
-                        {% endfor %}"
-                sizes="{{ sizes }}" />
-        <img src="{% static img_url %}" class="img-fluid" alt="{{ name|capfirst }}" width={{ design_width }} height={{ design_height }} srcset="{% for url,width in jpeg_urls %} {% static url %} {{ width }}w, {% endfor %}" sizes="{{ sizes }}" />
-</picture>
+<img src="{{ path }}"
+     srcset="{{ srcset }}"
+     sizes="{{ sizes }}"
+     alt="{{ name }}"
+     width="{{ design_width }}"
+     height="{{ design_height }}"
+     class="img-fluid">
