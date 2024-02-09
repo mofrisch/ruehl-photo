@@ -16,9 +16,6 @@ def picture(name, id, design_width, design_height, widths="", sizes=""):
     if widths:
         gen_widths = widths.split(",")
 
-    print(name + ": " + path)
-    print(gen_widths)
-    print("\n")
     srcset = ""
     for width in gen_widths:
         srcset += pic_path + "/w=" + width + " " + width + "w, "
